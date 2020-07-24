@@ -2,6 +2,7 @@ dependencies:
   '@nestjs/cli': 7.4.1
   '@nestjs/common': 7.3.2_5cbc1d2923b3463f21bc7015de9461d5
   '@nestjs/core': 7.3.2_7d26c453606128b0e9e2f571c374d0ba
+  '@nestjs/passport': 7.1.0_dd3662de441fbd3035946836d94daa43
   '@nestjs/platform-express': 7.3.2_c5f8cccbc03c8d9f59c3a7811ed342c7
   '@nestjs/schematics': 7.0.1_typescript@3.9.7
   '@nestjs/testing': 7.3.2_c5f8cccbc03c8d9f59c3a7811ed342c7
@@ -11,6 +12,8 @@ dependencies:
   '@types/node': 14.0.25
   '@types/supertest': 2.0.10
   jest: 26.1.0
+  passport: 0.4.1
+  passport-local: 1.0.0
   prettier: 2.0.5
   reflect-metadata: 0.1.13
   rimraf: 3.0.2
@@ -641,6 +644,16 @@ packages:
     requiresBuild: true
     resolution:
       integrity: sha512-oL1iDfkJyM/0L+LKS+/Yo7GUJkiEcYsZY/ndONdiv1XqiBC5t76DDXry9CuJmcRH36FJ+QbI5jwpKXjRa9D5dQ==
+  /@nestjs/passport/7.1.0_dd3662de441fbd3035946836d94daa43:
+    dependencies:
+      '@nestjs/common': 7.3.2_5cbc1d2923b3463f21bc7015de9461d5
+      passport: 0.4.1
+    dev: false
+    peerDependencies:
+      '@nestjs/common': ^6.0.0 || ^7.0.0
+      passport: ^0.4.0
+    resolution:
+      integrity: sha512-TdXqEwQ9PWWdpZsWp6jnora+zN+jg7h9Om9CAxXDMCqnmB+IJknkY0OyyplxbMjRyep1zvsc3IptuPHIXb27tA==
   /@nestjs/platform-express/7.3.2_c5f8cccbc03c8d9f59c3a7811ed342c7:
     dependencies:
       '@nestjs/common': 7.3.2_5cbc1d2923b3463f21bc7015de9461d5
@@ -4871,6 +4884,29 @@ packages:
       node: '>=0.10.0'
     resolution:
       integrity: sha1-s2PlXoAGym/iF4TS2yK9FdeRfxQ=
+  /passport-local/1.0.0:
+    dependencies:
+      passport-strategy: 1.0.0
+    dev: false
+    engines:
+      node: '>= 0.4.0'
+    resolution:
+      integrity: sha1-H+YyaMkudWBmJkN+O5BmYsFbpu4=
+  /passport-strategy/1.0.0:
+    dev: false
+    engines:
+      node: '>= 0.4.0'
+    resolution:
+      integrity: sha1-tVOaqPwiWj0a0XlHbd8ja0QPUuQ=
+  /passport/0.4.1:
+    dependencies:
+      passport-strategy: 1.0.0
+      pause: 0.0.1
+    dev: false
+    engines:
+      node: '>= 0.4.0'
+    resolution:
+      integrity: sha512-IxXgZZs8d7uFSt3eqNjM9NQ3g3uQCW5avD8mRNoXV99Yig50vjuaez6dQK2qC0kVWPRTujxY0dWgGfT09adjYg==
   /path-browserify/0.0.1:
     dev: false
     resolution:
@@ -4928,6 +4964,10 @@ packages:
       node: '>=8'
     resolution:
       integrity: sha512-gDKb8aZMDeD/tZWs9P6+q0J9Mwkdl6xMV8TjnGP3qJVJ06bdMgkbBlLU8IdfOsIsFz2BW1rNVT3XuNEl8zPAvw==
+  /pause/0.0.1:
+    dev: false
+    resolution:
+      integrity: sha1-HUCLP9t2kjuVQ9lvtMnf1TXZy10=
   /pbkdf2/3.1.1:
     dependencies:
       create-hash: 1.2.0
@@ -6733,6 +6773,7 @@ packages:
       '@nestjs/cli': 7.4.1
       '@nestjs/common': 7.3.2_5cbc1d2923b3463f21bc7015de9461d5
       '@nestjs/core': 7.3.2_7d26c453606128b0e9e2f571c374d0ba
+      '@nestjs/passport': 7.1.0_dd3662de441fbd3035946836d94daa43
       '@nestjs/platform-express': 7.3.2_c5f8cccbc03c8d9f59c3a7811ed342c7
       '@nestjs/schematics': 7.0.1_typescript@3.9.7
       '@nestjs/testing': 7.3.2_c5f8cccbc03c8d9f59c3a7811ed342c7
@@ -6741,6 +6782,8 @@ packages:
       '@types/node': 14.0.25
       '@types/supertest': 2.0.10
       jest: 26.1.0
+      passport: 0.4.1
+      passport-local: 1.0.0
       prettier: 2.0.5
       reflect-metadata: 0.1.13
       rimraf: 3.0.2
@@ -6754,7 +6797,7 @@ packages:
     dev: false
     name: '@rush-temp/account'
     resolution:
-      integrity: sha512-JRcIX1lbi+2QbsccEp8RZimyzc915fP8lCkhjPvdpemVKqzwZ+6cC0ssAJbceZ1uaDhldbc4HYdOJhWynLudIQ==
+      integrity: sha512-9l+qaZxlCkkttG/f4Jxjgw0Wrmd0WLu898NLGWhj2q7biGfYuf+VC8thJzj7vmxKJATzoOq8c3354MmloelZsg==
       tarball: 'file:projects/account.tgz'
     version: 0.0.0
 registry: ''
@@ -6762,6 +6805,7 @@ specifiers:
   '@nestjs/cli': ^7.4.1
   '@nestjs/common': ^7.3.2
   '@nestjs/core': ^7.3.2
+  '@nestjs/passport': ^7.1.0
   '@nestjs/platform-express': ^7.3.2
   '@nestjs/schematics': ^7.0.1
   '@nestjs/testing': ^7.3.2
@@ -6771,6 +6815,8 @@ specifiers:
   '@types/node': ^14.0.25
   '@types/supertest': ^2.0.10
   jest: ^26.1.0
+  passport: 0.4.1
+  passport-local: 1.0.0
   prettier: ^2.0.5
   reflect-metadata: ^0.1.13
   rimraf: ^3.0.2
