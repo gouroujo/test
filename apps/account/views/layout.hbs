@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>{{service}} - {{title}}</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <link href="/stylesheets/style.css" rel="stylesheet">
+</head>
+
+<body class="bg-white font-family-karla h-screen">
+
+    <div class="w-full flex justify-center">
+
+        <!-- Side Section -->
+        <div class="md:w-md flex flex-col justify-center">
+          {{{body}}}
+        </div>
+
+        <!-- Image Section -->
+        <div class="flex-auto shadow-2xl hidden md:block">
+            <img class="object-cover w-full h-screen hidden md:block" src="https://source.unsplash.com/IXUM4cJynP0">
+        </div>
+    </div>
+
+</body>
+</html>
