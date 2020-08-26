@@ -440,6 +440,11 @@
       "packageName": "@apps/account",
       "projectFolder": "apps/account",
       "shouldPublish": false
+    },
+    {
+      "packageName": "@apps/svelte-app",
+      "projectFolder": "apps/svelte-app",
+      "shouldPublish": false
     }
   ]
 }
