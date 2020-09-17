@@ -1,0 +1,74 @@
+<div class='container h-full'>
+  <form action='/profile/edit' method='POST'>
+    <input type="hidden" name="_csrf" value="{{csrfToken}}">
+    <div class='flex flex-col justify-between h-screen'>
+      <div>
+        <h2 class='text-2xl font-semibold text-gray-700 text-center'>
+          {{service}}
+        </h2>
+        <p class='text-xl text-gray-600 text-center'>
+          Edit Profile
+        </p>
+      </div>
+
+      <div class='max-w-lg mx-3'>
+        <div class='flex flex-wrap mb-6'>
+          <div class='w-full md:w-1/2 mb-6 md:mb-0'>
+            <label
+              class='block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2'
+              for='firstname'
+            >
+              First Name
+            </label>
+            <input
+              class='appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white'
+              id='firstname'
+              name='firstname'
+              value="{{profile.firstname}}"
+              type='text'
+              placeholder='Firstname'
+              @change=''
+            />
+            <p
+              class='text-red-500 text-xs italic'
+              x-show='lastnameError === "empty"'
+            >
+              Please fill out this field.
+            </p>
+          </div>
+          <div class='w-full md:w-1/2'>
+            <label
+              class='block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2'
+              for='lastname'
+            >
+              Last Name
+            </label>
+            <input
+              class='appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500'
+              id='lastname'
+              name='lastname'
+              value="{{profile.lastname}}"
+              type='text'
+              placeholder='Lastname'
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class='flex flex-row justify-between'>
+        <a class='btn btn-outline m-2' href='/profile'>
+          Cancel
+        </a>
+        <button class='btn btn-blue m-2' type='submit'>
+          Save
+        </button>
+      </div>
+    </div>
+  </form>
+</div>
+
+<script>
+  function app() {
+
+  }
+</script>

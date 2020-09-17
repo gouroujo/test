@@ -1,0 +1,17 @@
+{
+  "name": "@test/generator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "init": "hygen init self",
+    "new": "hygen generator new",
+    "generate": "hygen",
+    "build": "echo \"INFO : No build needed\" && exit 0"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "hygen": "~6.0.4"
+  }
+}

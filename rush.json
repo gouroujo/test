@@ -437,14 +437,25 @@
     //   "reviewCategory": "tools"
     // }
     {
-      "packageName": "@apps/account",
-      "projectFolder": "apps/account",
+      "packageName": "@test/account-service",
+      "projectFolder": "services/account",
       "shouldPublish": false
     },
     {
-      "packageName": "@apps/svelte-app",
-      "projectFolder": "apps/svelte-app",
+      "packageName": "@test/svelte-webapp",
+      "projectFolder": "services/svelte-app",
       "shouldPublish": false
-    }
+    },
+    {
+      "packageName": "@test/generator",
+      "projectFolder": "tools/generator",
+      "shouldPublish": false
+    },
+    {
+      "packageName": "@test/client-pkce",
+      "projectFolder": "libraries/client-pkce",
+      "shouldPublish": false
+    }// --- Package Generator markup (DO NOT DELETE !)
   ]
+    
 }

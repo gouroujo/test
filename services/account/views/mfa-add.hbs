@@ -1,0 +1,20 @@
+<div class="flex flex-col justify-center my-auto pt-8 md:pt-0 px-8 md:px-24 lg:px-32">
+  <h2 class="text-2xl font-semibold text-gray-700 text-center">{{service}}</h2>
+  <p class="text-xl text-gray-600 text-center">Multi Factor Authentication</p>
+
+  <img class="h-full w-full object-fit" src="{{qrcode}}">
+
+  <form action="/mfa/add{{#if redirect}}?redirect={{redirect}}{{else}}{{/if}}" method="POST">
+    <input type="hidden" name="_csrf" value="{{csrfToken}}">
+    <div class="mt-4">
+        <label for="token" class="block text-gray-700 text-sm font-bold mb-2">Temporary token</label>
+        <input type="text" id="token" placeholder="Enter token" name="code" class="bg-gray-200 text-gray-700 focus:outline-none focus:shadow-outline border border-gray-300 rounded py-2 px-4 block w-full appearance-none">
+    </div>
+    <input type="hidden" name="secret" value="{{secret}}" />
+    <div class="mt-8">
+        <button type="submit" class="bg-gray-700 text-white font-bold py-2 px-4 w-full rounded hover:bg-gray-600">Validate</button>
+        <a href="{{#if redirect}}{{redirect}}{{else}}/{{/if}}" class="button block mt-1 text-center py-2 px-4 w-full bg-transparent hover:bg-gray-500 text-gray-700 font-semibold hover:text-white py-2 px-4 border border-gray-500 hover:border-transparent rounded">Skip</a>
+    </div>
+  </form>
+
+</div>

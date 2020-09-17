@@ -1,0 +1,25 @@
+<div class='w-screen'>
+  <div
+    class='container bg-white overflow-hidden h-screen flex flex-col justify-center'
+  >
+    <h2 class='text-2xl font-semibold text-gray-700 text-center'>
+      {{service}}
+    </h2>
+    
+    <a class='btn btn-outline m-2 text-center' href='profile'>
+      Go to my profile
+    </a>
+
+    {{#if isAllowedToManageClients}}
+      <a class='btn btn-outline m-2 text-center' href='clients'>
+        Configure clients
+      </a>
+    {{/if}}
+
+    {{#if isAllowedToAdmin}}
+      <a class='btn btn-red m-2 text-center' href='admin'>
+        Admin
+      </a>
+    {{/if}}
+  </div>
+</div>

@@ -1,0 +1,22 @@
+<div class='w-full p-2 text-center'>
+  <a class='btn btn-blue' href='clients/add'>
+    Add a new client
+  </a>
+
+  {{#each clients}}
+    <div class='flex shadow m-4 p-4'>
+      <div class="m-2">logo</div>
+      <div>
+        <h3>{{name}}</h3>
+        <p>{{description}}</p>
+        <div class="flex flex-wrap text-xs">
+          {{#each allowedURI}}
+            <span class="bg-gray-300 p-1 px-2 my-1 rounded-lg">{{this}}</span>
+          {{/each}}
+        </div>
+
+      </div>
+      
+    </div>
+  {{/each}}
+</div>
