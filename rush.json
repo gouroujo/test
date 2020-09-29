@@ -455,6 +455,11 @@
       "packageName": "@test/client-pkce",
       "projectFolder": "libraries/client-pkce",
       "shouldPublish": false
+    },
+    {
+      "packageName": "@services/accounts",
+      "projectFolder": "services/accounts",
+      "shouldPublish": false
     }// --- Package Generator markup (DO NOT DELETE !)
   ]
     

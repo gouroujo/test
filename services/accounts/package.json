@@ -1,8 +1,5 @@
----
-to: <%= cwd %>/../../<%=category%>/<%=package%>/package.json
----
 {
-  "name": "@<%=category%>/<%=package%>",
+  "name": "@services/accounts",
   "version": "1.0.0",
   "description": "",
   "main": "dist/index.js",

@@ -1,6 +1,3 @@
----
-to: <%= cwd %>/../../<%=category%>/<%=package%>/tsconfig.json
----
 {
   "include": [
     "src/**/*"
